@@ -1,0 +1,15 @@
+BODY {margin-left: 60px; margin-right: 60px; margin-top: 110px; background: white url(soldier1.jpg) repeat-y fixed left top}
+H1 {font-family: arial, helvetica; font-size: 14pt; font-style: italic; color: #375F6D;}
+H3, H2 {font-family: arial, helvetica; font-size: 12pt; font-style: italic; color: #375F6D;}
+TD {font-family: arial, helvetica; font-size: 10pt; color: #375F6D;}
+P, LI {font-family: arial, helvetica; font-size: 10pt; color: #4E8699;}
+SMALL {font-family: arial, helvetica; font-size: 7pt; color: #4E8699;}
+A.P, A.LI, A {color: #806F3C; text-decoration: none}
+LI {color: #806F3C;}
+#body {
+     direction:rtl;
+     text-align:left;
+     width: 530px;
+     height: 330px;
+     overflow: auto;
+}
