@@ -49,7 +49,7 @@
       var item_name = '';
       var bonus_count = 0;
 
-      for (i = 2; i<=17; i++) {
+      for (i = 2; i<=7; i++) {
         if ((document.data.elements['tmp_quantity_1'].value * 1)>0 && document.data.elements['tmp_quantity_' + i].checked) {
           bonus_count++;
           if (bonus_count>2) {
@@ -65,7 +65,7 @@
          }
       }
 
-      for (i = 1;i <= 17;i++) {
+      for (i = 1;i <= 7;i++) {
         if ((document.data.elements['tmp_quantity_' + i].value * 1) > 0) {
           if (item_name.length > 0)
             item_name = item_name + ', ';
@@ -127,8 +127,8 @@
                   <td>
                     <div id="body">
                       <h2>BNE Order Form</h2>
-                      <p><font color="green">Special BNE
-                          deal - see form below</font></p>
+                      <p><font color="green">Special BNE Christmas 2019 
+                          deal: discount price + bonus CDs, see form below</font></p>
                       <p>BNE celebrates 35 Years of Brisbane Independent
                         Electronic Music.</p>
                       <p>Including a beautifully packaged coffee table style
@@ -183,8 +183,8 @@
                                         the button at the bottom of the form. We
                                         use PayPal for secure order processing.<br>
                                         <br>
-                                        The price for the complete Deluxe
-                                        Edition is $75.<br>
+                                        The Christmas 2019 special price for the complete Deluxe
+                                        Edition is $60 (a saving of 20% on RRP).<br>
                                         <br>
                                         Postage and packing for within Australia
                                         is $13.40 for up to 3 books, using a
@@ -226,19 +226,19 @@
                                                   Media Card incl 261 tracks and
                                                   bonus eBook <i>(Com70)</i> </td>
                                                 <td align="center" width="60"> <small>
-                                                    $75.00 <br>
+                                                    $60.00 <br>
                                                     <input size="3" value="0" name="tmp_quantity_1"
                                                       onchange="document.totals.allprod.value = totalProd(); document.totals.allpost.value=totalPost(); checkOrderForm();"
                                                       type="text">
                                                     <input name="tmp_item_name_1"
                                                       value="BNE Deluxe Edition"
                                                       type="hidden">
-                                                    <input name="tmp_amount_1" value="75.00"
+                                                    <input name="tmp_amount_1" value="60.00"
                                                       type="hidden">
                                                   </small> </td>
                                               </tr>
                                               <tr align="left">
-                                                <td colspan="2"> Special deal for a limited time only:
+                                                <td colspan="2"> Additional special deal for Chritmas 2019:
                                                   <br>
                                                   <small>&nbsp;&nbsp;&nbsp;&nbsp;Choose
                                                     any two (2) of the following
@@ -291,7 +291,7 @@
                                                       onclick="checkOrderForm();"
                                                       type="checkbox"><input
                                                       name="tmp_item_name_5"
-                                                      value="Free Man-Dog Bites CD"
+                                                      value="Free Whyitzer CD"
                                                       type="hidden"><input
                                                       name="tmp_amount_5"
                                                       value="0"
@@ -303,153 +303,26 @@
                                                       onclick="checkOrderForm();"
                                                       type="checkbox"><input
                                                       name="tmp_item_name_6"
-                                                      value="Free Moment CD"
+                                                      value="Free Blood Party Tape"
                                                       type="hidden"><input
                                                       name="tmp_amount_6"
                                                       value="0"
                                                       type="hidden">
-                                                    THE ISLE: Moment CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_16"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_16"
-                                                      value="Free La Femme CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_16"
-                                                      value="0"
-                                                      type="hidden">
-                                                    THE ISLE: La Femme Exotique
-                                                    CD <br>
+                                                    BLOOD PARTY: Rock n Roll
+                                                    Psychology Tape <br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;<input
                                                       name="tmp_quantity_7"
                                                       value="0"
                                                       onclick="checkOrderForm();"
                                                       type="checkbox"><input
                                                       name="tmp_item_name_7"
-                                                      value="Free Techno Den CD"
+                                                      value="Free AEK CD"
                                                       type="hidden"><input
                                                       name="tmp_amount_7"
                                                       value="0"
                                                       type="hidden">
-                                                    ANDE FOSTER: Deep In The
-                                                    Techno Den CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_8"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_8"
-                                                      value="Free Wonderland CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_8"
-                                                      value="0"
-                                                      type="hidden">
-                                                    SPHERE: Wonderland CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_9"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_9"
-                                                      value="Free Sometimes Hysteria CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_9"
-                                                      value="0"
-                                                      type="hidden">
-                                                    SPHERE: Sometimes Hysteria
-                                                    CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_11"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_11"
-                                                      value="Free Blood Party Tape"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_11"
-                                                      value="0"
-                                                      type="hidden">
-                                                    BLOOD PARTY: Rock n Roll
-                                                    Psychology Tape <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_17"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_17"
-                                                      value="Free Dark Arts of Dub CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_17"
-                                                      value="0"
-                                                      type="hidden">
-                                                    VICTOR XRAY: Dark Arts Of
-                                                    Dub CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_10"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_10"
-                                                      value="Free AEK CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_10"
-                                                      value="0"
-                                                      type="hidden">
                                                     ALL ELECTRIC KITCHEN:
-                                                    Elementary Urban Sanity CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_12"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_12"
-                                                      value="Free Someone Like You CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_12"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PROJEKT INERTIA: Someone
-                                                    Like You CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_13"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_13"
-                                                      value="Free Shine Like A Star CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_13"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PROJEKT INERTIA: Shine Like
-                                                    A Star CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_14"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_14"
-                                                      value="Free Lemonade CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_14"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PROJEKT INERTIA: Lemonade CD
-                                                    <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_15"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_15"
-                                                      value="Free Bangkok CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_15"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PROJEKT INERTIA: Bangkok CD
+                                                    Elementary Urban Sanity CD
                                                   </small></td>
                                               </tr>
                                             </tbody>
