@@ -1,71 +1,49 @@
 <html>
-  <head>
-    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
-    <title>Transmission Communications (Trans:Com) - www.trans.com.au</title>
-    <meta name="package" content="(TYPE=begin) AltaVista">
-    <meta name="package" content="(TYPE=begin) InfoSeek">
-    <meta name="description" content="Transmission Communications is a record label based in Brisbane.">
-    <meta name="keywords" content="techno, music, electronica, transcom, transmission, brisbane, synth, electronic, house">
-    <meta name="package" content="(TYPE=end) AltaVista">
-    <meta name="package" content="(TYPE=end) Infoseek">
-    <meta name="package" content="(TYPE=begin) Dublin Core">
-    <meta name="DC.Title" content="Trans:Com Home Page">
-    <meta name="DC.Subject" content="techno, music, electronica, transcom, transmission, brisbane, synth, electronic, house">
-    <meta name="DC.Description" content="Transmission Communications is a record label based in Brisbane.">
-    <meta name="DC.Creator" content="Dennis Remmer">
-    <meta name="DC.Creator.Email" content="dennis@trans.com.au">
-    <meta name="DC.Publisher" content="E2 Pty Ltd (t/a Transmission Communications)">
-    <meta name="DC.Date.Created" content="1994-01-01">
-    <meta name="DC.Date.Modified" content="2017-01-01">
-    <meta name="DC.Format" content="text/html">
-    <meta name="DC.Identifier" content="http://www.trans.com.au/">
-    <meta name="DC.Language" content="en-au">
-    <meta name="DC.Rights" content="Copyright E2 Pty Ltd (t/a Transmission Communications) 1994-2017">
-    <meta name="package" content="(TYPE=end) Dublin Core">
-    <style type="text/css">
-<!--
- @import url("style.css");
--->
-  </style>
-    <script language="JavaScript">
 
+<head>
+  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  <title>BNE Special Order</title>
+  <style type="text/css">
+    <!--
+    @import url("style.css");
+    -->
+  </style>
+  <script language="JavaScript">
     function pad(number, length) {
       var str = '' + number;
       while (str.length < length)
         str = '0' + str;
       return str;
     }
-    
+
     function totalProd() {
       return (document.data.tmp_quantity_1.value * document.data.tmp_amount_1.value);
     }
 
     function totalPost() {
       var reqd = Math.round(((document.data.tmp_quantity_1.value * 1) + 1) / 3);
-      return (13.40 * reqd);
+      return (12.45 * reqd);
     }
 
     function checkOrderForm() {
       var item_name = '';
       var bonus_count = 0;
 
-      for (i = 2; i<=7; i++) {
-        if ((document.data.elements['tmp_quantity_1'].value * 1)>0 && document.data.elements['tmp_quantity_' + i].checked) {
+      for (i = 2; i <= 6; i++) {
+        if ((document.data.elements['tmp_quantity_1'].value * 1) > 0 && document.data.elements['tmp_quantity_' + i].checked) {
           bonus_count++;
-          if (bonus_count>2) {
+          if (bonus_count > 2) {
             document.data.elements['tmp_quantity_' + i].value = 0;
             document.data.elements['tmp_quantity_' + i].checked = false;
-            }
-          else
+          } else
             document.data.elements['tmp_quantity_' + i].value = 1;
-         }
-         else {
-            document.data.elements['tmp_quantity_' + i].value = 0;
-            document.data.elements['tmp_quantity_' + i].checked = false;
-         }
+        } else {
+          document.data.elements['tmp_quantity_' + i].value = 0;
+          document.data.elements['tmp_quantity_' + i].checked = false;
+        }
       }
 
-      for (i = 1;i <= 7;i++) {
+      for (i = 1; i <= 6; i++) {
         if ((document.data.elements['tmp_quantity_' + i].value * 1) > 0) {
           if (item_name.length > 0)
             item_name = item_name + ', ';
@@ -80,336 +58,189 @@
     }
 
     function processCart() {
-      var msg = 'Order confirmation\n\nItems:\n\u2022 ' + document.form.item_name.value.replace(/\,/g, "\n\u2022") + '\nPrice: AU$' + document.totals.allprod.value + '\nPostage: AU$' + document.totals.allpost.value + '\nTotal: AU$' + document.totals.alltotal.value + '\n\nClick OK to complete and finalise your order using PayPal';
+      var msg = 'Order confirmation\nItems:\n\u2022 ' + document.form.item_name.value.replace(/\,/g, "\n\u2022") + '\nPrice: AU$' + document.totals.allprod.value + '\nPostage: AU$' + document.totals.allpost.value + '\nTotal: AU$' + document.totals
+        .alltotal.value + '\nClick OK to finalise and confirm your order details via PayPal';
       var r = confirm(msg);
       if (r == true) {
         document.form.action = "https://www.paypal.com/cgi-bin/webscr";
         document.form.target = "new";
-      }
-      else {
+      } else {
         document.form.action = "";
         document.form.target = "blank";
         return false;
       }
     }
   </script>
-  </head>
-  <body>
-    <table style="BORDER-RIGHT: DarkSlateGray thin solid; BORDER-TOP: DarkSlateGray thin solid; BORDER-LEFT: DarkSlateGray thin solid; BORDER-BOTTOM: DarkSlateGray thin solid"
-      align="center"
-      bgcolor="black"
-      border="0"
-      cellpadding="0"
-      cellspacing="0"
-      width="900">
-      <tbody>
-        <tr>
-          <td colspan="2" style="BORDER-BOTTOM: DarkSlateGray thin solid" align="LEFT"
-            valign="MIDDLE">
-            <img src="tc_bw.GIF"> </td>
-          <td align="RIGHT"> 
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" style="BORDER-BOTTOM: DarkSlateGray thin solid"> <img
-              src="back105.jpg"
-              alt=""
-              style="height:185px;width:896px;"
-              border="0">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" style="BORDER-BOTTOM: DarkSlateGray thin solid">
-            <table align="center" bgcolor="black" border="0" cellpadding="20" cellspacing="0"
-              width="890">
-              <tbody>
-                <tr>
-                  <td>
-                    <div id="body">
-                      <h2>BNE Order Form</h2>
-                      <p><font color="green">Special BNE Christmas 2019 
-                          deal: discount price + bonus CDs, see form below</font></p>
-                      <p>BNE celebrates 35 Years of Brisbane Independent
-                        Electronic Music.</p>
-                      <p>Including a beautifully packaged coffee table style
-                        book and companion music archive (on a custom USB
-                        device) featuring 140 bands and <u>over 260 tracks</u>
-                        (nearly 24 hours of rare and exclusive music, much of it
-                        unavailable for many years), BNE provides electronic
-                        music lovers with a complete exploration of 35 years of
-                        Brisbane-based independent electronic music performance
-                        and production. The BNE book includes comprehensive band
-                        histories, photos, cover art, event flyers, and scene
-                        insights. It is the most comprehensive archive of a
-                        city's independent electronic music scene ever produced
-                        anywhere in the world.</p>
-                      <p> <i>Brisbane has always been a unique and sometimes
-                          challenging place for artistic endeavour, particularly
-                          with respect to our city's social, political and
-                          geographic context, and BNE captures the spirit of
-                          true innovation in the modern art form that is
-                          electronic music. There are some wonderful stories in
-                          BNE, but most importantly there is a lot of amazing
-                          music.</i> </p>
-                      <p> The Deluxe Edition is strictly limited, so to
-                        guarantee a copy we recommend ordering now to avoid
-                        disappointment. </p>
-                      <h3>BNE Deluxe Edition</h3>
-                      <p>The BNE Deluxe Edition includes:</p>
-                      <ul>
-                        <li> The 114-page A4-size <i>coffee table</i> book in
-                          full colour hardcover. </li>
-                        <li>A USB2.0-compatible storage card which includes more
-                          than 260 tracks from over 140 bands and artists.<br>
-                          The audio is provided in uncompressed FLAC and 192kbps
-                          MP3 formats.</li>
-                        <li>The BNE eBook as a bonus on the USB card.</li>
-                      </ul>
-                      <p>All profits from the package release are being donated
-                        to the Brisbane Lord Mayor's Charitable Trust, which
-                        aims to improve the wellbeing of the most marginalised,
-                        vulnerable members of the Brisbane community.</p>
-                      <center>
-                        <table border="0" cellpadding="5" cellspacing="3" width="600">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <table border="1" bordercolor="white" cellpadding="5">
-                                  <tbody>
-                                    <tr>
-                                      <td> To secure your copy of the BNE Deluxe
-                                        Edition, fill out the quantity in the
-                                        form below and complete your order using
-                                        the button at the bottom of the form. We
-                                        use PayPal for secure order processing.<br>
-                                        <br>
-                                        The Christmas 2019 special price for the complete Deluxe
-                                        Edition is $60 (a saving of 20% on RRP).<br>
-                                        <br>
-                                        Postage and packing for within Australia
-                                        is $13.40 for up to 3 books, using a
-                                        standard <a href="http://auspost.com.au/parcels-mail/prepaid-satchels.html"
-                                          target="new">Australia
-                                          Post Medium Parcel Satchel</a>. All
-                                        prices include GST. <br>
-                                        <br>
-                                        If you are ordering from overseas, don't
-                                        use the form and instead <a href="mailto:dennis@trans.com.au?Subject=BNE%20International%20Preorder">email
-                                          us directly</a> and advice the number
-                                        of BNE Deluxe Editions to order, and
-                                        your postal address. We will issue a
-                                        direct Paypal invoice - with postage
-                                        calculated using <a href="http://auspost.com.au/parcels-mail/pack-and-track-international.html"
-                                          target="new">International
-                                          Pack and Track</a>. </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td> <img src="com70b.jpg"> </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <table border="1" bordercolor="white" cellpadding="2"
-                                  width="600">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <form name="data">
-                                          <table border="0" cellpadding="5" width="550">
-                                            <tbody>
-                                              <tr align="left">
-                                                <td> BNE Deluxe Edition <br>
-                                                  114pg Hardcover Book + USB
-                                                  Media Card incl 261 tracks and
-                                                  bonus eBook <i>(Com70)</i> </td>
-                                                <td align="center" width="60"> <small>
-                                                    $60.00 <br>
-                                                    <input size="3" value="0" name="tmp_quantity_1"
-                                                      onchange="document.totals.allprod.value = totalProd(); document.totals.allpost.value=totalPost(); checkOrderForm();"
-                                                      type="text">
-                                                    <input name="tmp_item_name_1"
-                                                      value="BNE Deluxe Edition"
-                                                      type="hidden">
-                                                    <input name="tmp_amount_1" value="60.00"
-                                                      type="hidden">
-                                                  </small> </td>
-                                              </tr>
-                                              <tr align="left">
-                                                <td colspan="2"> Additional special deal for Christmas 2019:
-                                                  <br>
-                                                  <small>&nbsp;&nbsp;&nbsp;&nbsp;Choose
-                                                    any two (2) of the following
-                                                    Trans:Com <a href="http://www.trans.com.au"
-                                                      target="new">catalogue
-                                                      items</a> as free bonus
-                                                    inclusions with this order.
-                                                    <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_2"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_2"
-                                                      value="Free Cyberia CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_2"
-                                                      value="0"
-                                                      type="hidden">
-                                                    VARIOUS: Cyberia CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_3"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_3"
-                                                      value="Free Empiricism CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_3"
-                                                      value="0"
-                                                      type="hidden">LOW
-                                                    KEY + NUDE: Empiricism 7 CD
-                                                    <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_4"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_4"
-                                                      value="Free Man-Dog Bites CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_4"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PURE BUNK: Man-Dog Bites CD
-                                                    <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_5"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_5"
-                                                      value="Free Whyitzer CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_5"
-                                                      value="0"
-                                                      type="hidden">
-                                                    PURE BUNK: Whyitzer CD <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_6"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_6"
-                                                      value="Free Blood Party Tape"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_6"
-                                                      value="0"
-                                                      type="hidden">
-                                                    BLOOD PARTY: Rock n Roll
-                                                    Psychology Tape <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input
-                                                      name="tmp_quantity_7"
-                                                      value="0"
-                                                      onclick="checkOrderForm();"
-                                                      type="checkbox"><input
-                                                      name="tmp_item_name_7"
-                                                      value="Free AEK CD"
-                                                      type="hidden"><input
-                                                      name="tmp_amount_7"
-                                                      value="0"
-                                                      type="hidden">
-                                                    ALL ELECTRIC KITCHEN:
-                                                    Elementary Urban Sanity CD
-                                                  </small></td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </form>
+</head>
+
+<body>
+  <table style="BORDER-RIGHT: DarkSlateGray thin solid; BORDER-TOP: DarkSlateGray thin solid; BORDER-LEFT: DarkSlateGray thin solid; BORDER-BOTTOM: DarkSlateGray thin solid" align="center" bgcolor="black" border="0" cellpadding="0" cellspacing="0"
+    width="900">
+    <tbody>
+      <tr>
+        <td colspan="2" align="LEFT" valign="MIDDLE">
+          <img src="tc_bw.GIF"> </td>
+        <td align="RIGHT">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <table align="center" bgcolor="black" border="0" cellpadding="20" cellspacing="0" width="890">
+            <tbody>
+              <tr>
+                <td>
+                  <div id="body">
+                    <h2>
+                      <font color="green">Special Christmas
+                        offer for our Australian fans!</font>
+                    </h2>
+                    <p>We've done a deep dive into our storage and found
+                      that we're down to our last 50 copies of the book, so we're making
+                      these final copies available as a special Christmas 2020 deal for
+                      our Australian fans @ only $50 per book (normally $75), and because we also found a hidden stash
+                      of particular (and rare) Trans:Com CD titles you can choose any 2
+                      CDs from the list below at no extra cost. Awesome value - particularly if you're on <I>Secret Santa</i> duties!</p>
+                    <p>BNE celebrates 35 Years of Brisbane Independent
+                      Electronic Music as a beautifully packaged coffee table style
+                      book and companion music archive (on USB card) featuring 140 bands and over 260 tracks. BNE provides electronic
+                      music lovers with a complete exploration of 35 years of
+                      Brisbane-based independent electronic music performance
+                      and production. The book includes comprehensive band
+                      histories, photos, cover art, event flyers, and scene
+                      insights. It is the most comprehensive archive of a
+                      city's independent electronic music scene ever produced
+                      anywhere in the world.</p>
+                    <p>Fill out the book quantity in the
+                      form below and complete your order using
+                      the button at the bottom of the form. We
+                      use PayPal for secure order processing. Postage and packing within Australia
+                      is a flat rate of $12.45 for up to 3 books, using a
+                      standard <a href="http://auspost.com.au/parcels-mail/prepaid-satchels.html" target="new">Australia
+                        Post Medium Satchel</a>. All
+                      prices include GST. <br>
+                      <br>
+                      Please note that this special offer is only available to Australian addresses. If you are ordering from overseas, please order from our <a href="https://www.discogs.com/seller/transcom/profile?sort=price%2Cdesc&limit=250"
+                        target="new">Discogs Store</a>.
+                    </p>
+                    <center>
+                      <table border="0" cellpadding="5" cellspacing="3" width="600">
+                        <tbody>
+                          <tr>
+                            <td> <img src="com70b.jpg"> </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table border="1" bordercolor="white" cellpadding="2" width="600">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <form name="data">
                                         <table border="0" cellpadding="5" width="550">
                                           <tbody>
-                                            <tr>
-                                              <td align="right" width="450">
-                                                <form name="form" action="" method="post"
-                                                  target="">
-                                                  <input name="business" value="dennis@etwo.com.au"
-                                                    type="hidden">
-                                                  <input name="cmd" value="_xclick"
-                                                    type="hidden">
-                                                  <input name="item_name" value=""
-                                                    type="hidden">
-                                                  <input name="amount" value=""
-                                                    type="hidden">
-                                                  <input name="tax" value="0.00"
-                                                    type="hidden">
-                                                  <input name="shipping" value=""
-                                                    type="hidden">
-                                                  <input name="currency_code" value="AUD"
-                                                    type="hidden">
-                                                  <input name="submit" onclick="processCart();"
-                                                    src="https://www.paypal.com/en_US/i/btn/x-click-but5.gif"
-                                                    alt="PayPal - The safer, easier way to pay online"
-                                                    border="0"
-                                                    type="image">
-                                                </form>
-                                              </td>
-                                              <td align="right" width="100">
-                                                <form name="totals"> <small>
-                                                    Totals: <br>
-                                                    Price: $ <input size="3" readonly="readonly"
-                                                      name="allprod"
-                                                      value="0"
-                                                      type="text">
-                                                    <br>
-                                                    Postage: $ <input size="3"
-                                                      readonly="readonly"
-                                                      name="allpost"
-                                                      value="0"
-                                                      type="text">
-                                                    <br>
-                                                    Total: $ <input size="3" readonly="readonly"
-                                                      name="alltotal"
-                                                      value="0"
-                                                      type="text">
-                                                  </small> </form>
-                                              </td>
+                                            <tr align="left">
+                                              <td> BNE Deluxe Edition <br>
+                                                114pg Hardcover Book + USB
+                                                Media Card incl 261 tracks and
+                                                bonus eBook</td>
+                                              <td align="center" width="60"> <small>
+                                                  $50.00 <br>
+                                                  <input size="3" value="0" name="tmp_quantity_1" onchange="document.totals.allprod.value = totalProd(); document.totals.allpost.value=totalPost(); checkOrderForm();" type="text">
+                                                  <input name="tmp_item_name_1" value="BNE Deluxe Edition" type="hidden">
+                                                  <input name="tmp_amount_1" value="50.00" type="hidden">
+                                                </small> </td>
+                                            </tr>
+                                            <tr align="left">
+                                              <td colspan="2"> Choose
+                                                any two (2) of the following
+                                                Trans:Com CD titles
+                                                as free
+                                                inclusions with this order.
+                                                <br>
+                                                <small>
+                                                  <br>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;<input name="tmp_quantity_2" value="0" onclick="checkOrderForm();" type="checkbox"><input name="tmp_item_name_2" value="Free Cyberia CD" type="hidden"><input
+                                                    name="tmp_amount_2" value="0" type="hidden">
+                                                  VARIOUS: Cyberia CD <br>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;<input name="tmp_quantity_3" value="0" onclick="checkOrderForm();" type="checkbox"><input name="tmp_item_name_3" value="Free Empiricism CD" type="hidden"><input
+                                                    name="tmp_amount_3" value="0" type="hidden">
+                                                  LOW KEY + NUDE: Empiricism 7 CD
+                                                  <br>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;<input name="tmp_quantity_4" value="0" onclick="checkOrderForm();" type="checkbox"><input name="tmp_item_name_4" value="Free Man-Dog Bites CD" type="hidden"><input
+                                                    name="tmp_amount_4" value="0" type="hidden">
+                                                  PURE BUNK: Man-Dog Bites CD
+                                                  <br>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;<input name="tmp_quantity_5" value="0" onclick="checkOrderForm();" type="checkbox"><input name="tmp_item_name_5" value="Free Whyitzer CD" type="hidden"><input
+                                                    name="tmp_amount_5" value="0" type="hidden">
+                                                  PURE BUNK: Whyitzer CD <br>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;<input name="tmp_quantity_6" value="0" onclick="checkOrderForm();" type="checkbox"><input name="tmp_item_name_6" value="Free EUS CD" type="hidden"><input name="tmp_amount_6"
+                                                    value="0" type="hidden">
+                                                  ALL ELECTRIC KITCHEN:
+                                                  Elementary Urban Sanity CD
+                                                </small></td>
                                             </tr>
                                           </tbody>
                                         </table>
-                                        <iframe name="blank" style="visibility:hidden"
-                                          height="0"
-                                          width="0">
-                                          &lt;!-------&gt; &lt;/td&gt;
-                                          &lt;/tr&gt; &lt;/table&gt; &lt;/td&gt;
-                                          &lt;/tr&gt; &lt;/table&gt;
-                                          &lt;/center&gt; &lt;/div&gt;
-                                          &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt;
-                                          &lt;td&gt; &lt;div id="container"&gt;
-                                          &lt;div id="text"
-                                          style="visibility:hidden;opacity:0;"&gt;&lt;/div&gt;
-                                          &lt;/div&gt; &lt;/td&gt; &lt;/tr&gt;
-                                          &lt;/table&gt; &lt;/td&gt; &lt;/tr&gt;
-                                          &lt;/table&gt; &lt;/body&gt;
-                                          &lt;/html&gt;
-                                        </iframe></td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </center>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+                                      </form>
+                                      <table border="0" cellpadding="5" width="550">
+                                        <tbody>
+                                          <tr>
+                                            <td align="right" width="450">
+                                              <form name="form" action="" method="post" target="">
+                                                <input name="business" value="dennis@etwo.com.au" type="hidden">
+                                                <input name="cmd" value="_xclick" type="hidden">
+                                                <input name="item_name" value="" type="hidden">
+                                                <input name="amount" value="" type="hidden">
+                                                <input name="tax" value="0.00" type="hidden">
+                                                <input name="shipping" value="" type="hidden">
+                                                <input name="currency_code" value="AUD" type="hidden">
+                                                <input name="submit" onclick="processCart();" src="https://www.paypal.com/en_US/i/btn/x-click-but5.gif" alt="PayPal - The safer, easier way to pay online" border="0" type="image">
+                                              </form>
+                                            </td>
+                                            <td align="right" width="100">
+                                              <form name="totals"> <small>
+                                                  Totals: <br>
+                                                  Price: $ <input size="3" readonly="readonly" name="allprod" value="0" type="text">
+                                                  <br>
+                                                  Postage: $ <input size="3" readonly="readonly" name="allpost" value="0" type="text">
+                                                  <br>
+                                                  Total: $ <input size="3" readonly="readonly" name="alltotal" value="0" type="text">
+                                                </small> </form>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <iframe name="blank" style="visibility:hidden" height="0" width="0">
+                                        &lt;!-------&gt; &lt;/td&gt;
+                                        &lt;/tr&gt; &lt;/table&gt; &lt;/td&gt;
+                                        &lt;/tr&gt; &lt;/table&gt;
+                                        &lt;/center&gt; &lt;/div&gt;
+                                        &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt;
+                                        &lt;td&gt; &lt;div id="container"&gt;
+                                        &lt;div id="text"
+                                        style="visibility:hidden;opacity:0;"&gt;&lt;/div&gt;
+                                        &lt;/div&gt; &lt;/td&gt; &lt;/tr&gt;
+                                        &lt;/table&gt; &lt;/td&gt; &lt;/tr&gt;
+                                        &lt;/table&gt; &lt;/body&gt;
+                                        &lt;/html&gt;
+                                      </iframe>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </center>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>
